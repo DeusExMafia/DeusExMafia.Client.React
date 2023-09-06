@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component, ReactNode } from 'react';
+import DeusExMafiaClient from './DeusExMafiaClient';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+    private readonly client: DeusExMafiaClient;
+
+    public constructor(props: any) {
+        super(props);
+        this.client = new DeusExMafiaClient(() => {
+            this.setState({});
+        });
+    }
+
+    public render(): ReactNode {
+        return this.client.screenHandler.screen;
+    }
 }
-
-export default App;
