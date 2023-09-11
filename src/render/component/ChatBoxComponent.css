@@ -1,0 +1,26 @@
+.chat-box {
+    display: grid;
+    min-height: 0px;
+    grid-template: 1fr auto / 1fr;
+    grid-template-areas:
+        "messages"
+        "input";
+}
+
+.chat-messages {
+	display: flex;
+	grid-area: "messages";
+	flex-direction: column;
+	overflow-y: auto;
+
+}
+
+.chat-messages > :first-child {
+	margin-top: auto;
+}
+
+.chat-input {
+    grid-area: "input";
+    display: grid;
+    grid-template-columns: 1fr auto;
+}

@@ -1,0 +1,48 @@
+.lobby-screen-box {
+    display: grid;
+    grid-template: auto auto 1fr / 2fr 1fr;
+    gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+        "title title"
+        "toolbar toolbar"
+        "chat players";
+}
+
+.lobby-screen-title {
+    display: flex;
+    grid-area: title;
+    font-size: 32px;
+    justify-content: center;
+}
+
+.lobby-screen-toolbar {
+    display: flex;
+    align-items: center;
+    grid-area: toolbar;
+    background: #F0F0F0;
+}
+
+.lobby-screen-chat {
+    grid-area: chat;
+    background: #F0F0F0;
+}
+
+.lobby-screen-players {
+    display: flex;
+    grid-area: players;
+    flex-direction: column;
+    align-items: center;
+    background: #F0F0F0;
+    text-align: center;
+}
+
+.lobby-screen-players > .player-label {
+    margin-bottom: 1em;
+}
+
+.lobby-screen-toolbar, .lobby-screen-chat, .lobby-screen-players {
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

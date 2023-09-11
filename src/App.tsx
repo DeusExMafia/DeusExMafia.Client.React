@@ -1,4 +1,5 @@
 import { Component, ReactNode } from 'react';
+import "./App.css";
 import DeusExMafiaClient from './DeusExMafiaClient';
 
 export default class App extends Component {
@@ -12,6 +13,6 @@ export default class App extends Component {
     }
 
     public render(): ReactNode {
-        return this.client.screenHandler.screen;
+        return this.client.screenHandler.screen();
     }
 }

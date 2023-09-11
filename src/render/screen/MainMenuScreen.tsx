@@ -1,6 +1,6 @@
 import { Component, ReactNode } from "react";
 import DeusExMafiaClient from "../../DeusExMafiaClient";
-import TestScreen from "./TestScreen";
+import "./MainMenuScreen.css";
 
 interface Props {
     client: DeusExMafiaClient;
@@ -9,14 +9,12 @@ interface Props {
 export default class MainMenuScreen extends Component<Props> {
     public render(): ReactNode {
         return (
-            <div>
-                <p>Main Menu</p>
-                <button onClick={() => this.goToTestScreen()}>Go to test screen</button>
+            <div className="main-menu-box">
+                <div className="main-menu-title">Main Menu</div>
+                <div className="main-menu-buttons">
+                    <button onClick={() => this.props.client.connect()}>Connect</button>
+                </div>
             </div>
         );
-    }
-
-    private goToTestScreen(): void {
-        this.props.client.screenHandler.screen = <TestScreen />;
     }
 }

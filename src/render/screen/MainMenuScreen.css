@@ -1,0 +1,23 @@
+.main-menu-box {
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+        "title"
+        "buttons";
+}
+
+.main-menu-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 1em 0px;
+}
+
+.main-menu-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
