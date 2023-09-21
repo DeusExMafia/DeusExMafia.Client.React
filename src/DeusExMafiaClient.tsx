@@ -37,8 +37,10 @@ export default class DeusExMafiaClient {
         this._player = player;
     }
 
-    public connect(): void {
-        let webSocket: WebSocket = new WebSocket(AppData.serverAddress);
+    public connect(token: string): void {
+        let url: URL = new URL(AppData.serverAddress);
+        url.searchParams.append("token", token);
+        let webSocket: WebSocket = new WebSocket(url);
         this._clientConnection = new ClientConnection(this, webSocket, new LoginNetworkHandler(webSocket, this));
     }
 

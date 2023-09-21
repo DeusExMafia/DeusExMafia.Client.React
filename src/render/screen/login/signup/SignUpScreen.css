@@ -1,0 +1,30 @@
+.signup-box {
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    grid-template-areas:
+        "title"
+        "input";
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-title {
+    font-size: 32px;
+    grid-area: "title";
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.signup-body {
+    grid-area: "input";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-settings-body {
+    padding-top: 2em;
+}

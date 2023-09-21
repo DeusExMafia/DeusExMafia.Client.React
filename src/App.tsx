@@ -1,5 +1,7 @@
+import { gapi } from 'gapi-script';
 import { Component, ReactNode } from 'react';
 import "./App.css";
+import AppData from "./AppData.json";
 import DeusExMafiaClient from './DeusExMafiaClient';
 
 export default class App extends Component {
@@ -9,6 +11,12 @@ export default class App extends Component {
         super(props);
         this.client = new DeusExMafiaClient(() => {
             this.setState({});
+        });
+        gapi.load("client:auth2", () => {
+            gapi.client.init({
+                clientId: AppData.auth.google.clientId,
+                scope: ""
+            });
         });
     }
 

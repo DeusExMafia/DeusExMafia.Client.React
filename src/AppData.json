@@ -1,3 +1,9 @@
 {
-    "serverAddress": "wss://localhost:7057/gameplay"
+    "accountServerAddress": "https://localhost:7078/api/Account/",
+    "serverAddress": "wss://localhost:7057/gameplay",
+    "auth": {
+        "google": {
+            "clientId": "46860649777-0t23lf3hi7374r0dt8kunc5q4qpojcr7.apps.googleusercontent.com"
+        }
+    }
 }

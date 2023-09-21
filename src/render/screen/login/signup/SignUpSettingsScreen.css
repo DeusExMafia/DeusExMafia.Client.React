@@ -1,0 +1,25 @@
+.signup-settings-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.signup-settings-title {
+    font-size: 24px;
+    margin-bottom: 0.25em;
+}
+
+.signup-settings-input {
+    border-spacing: 5px 2px;
+}
+
+.signup-settings-input th {
+    text-align: right;
+}
+
+.signup-settings-input td {
+    text-align: left;
+}
